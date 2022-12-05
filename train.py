@@ -105,7 +105,7 @@ def train_net(net,
                             Path(dir_checkpoint).mkdir(parents=True, exist_ok=True)
                             torch.save(net.state_dict(), str(dir_checkpoint / 'best_checkpoint.pth'))
                             logging.info(f'Best checkpoint saved!')
-
+            # update tqdm bar
             pbar.update()
 
 
